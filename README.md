@@ -30,6 +30,15 @@ This generates 3 x 15 f\_\*.pngs with 3 x 3 grid.
 
 Prints help.
 
+### With Pause
+
+> note that we end the sequence with the same image as the start to create a perfect loop:
+
+`node aimjs -i vg0.png vg30.png vg0.png -o f -p 10`
+
+Then make into a looped gif
+`ffmpeg -framerate 30 -i f%d.png f.gif`
+
 ## Options
 
 - `-i` : REQUIRED flag to begin input filename list
