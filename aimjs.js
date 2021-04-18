@@ -378,14 +378,14 @@ function anim(
         subpixel
       );
       frame++;
-      filename = outfileprefix + frame + ".png";
+      filename = outfileprefix + `${frame}`.padStart(5, "0") + ".png";
       savepng(filename, outpng, pngopts);
       console.log(filename + " saved. " + (Date.now() - starttime) + " s");
     }
     if (pause) {
       for (let k = 0; k < pause; k++) {
         frame++;
-        filename = outfileprefix + frame + ".png";
+        filename = outfileprefix + `${frame}`.padStart(5, "0") + ".png";
         savepng(filename, outpng, pngopts);
         console.log(
           "PAUSE:" + filename + " saved. " + (Date.now() - starttime) + " s"
